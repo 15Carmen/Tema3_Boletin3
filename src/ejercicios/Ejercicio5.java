@@ -31,5 +31,8 @@ public class Ejercicio5 {
 
         //Imprimimos el resultado de la media por consola
         System.out.println("La media de los numeros introducidos es: "+media);
+
+        //Cerramos el scanner
+        sc.close();
     }
 }

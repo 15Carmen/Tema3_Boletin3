@@ -9,21 +9,30 @@ public class Ejercicio7 {
     public static void main(String[] args) {
         //Declaramos las variables
         int num;
-        double factorial;
+        double factorial=1;
+        String cadenaFactorial = "";
 
         //Declaramos el scanner para poder leer por consola
         Scanner sc = new Scanner(System.in);
 
         //Le pedimos al usuario que introduzca un numero para calcular su factorial
-        System.out.println("Introduzca un numero: ");
+        System.out.println("Introduzca un numero entero positivo: ");
         num = sc.nextInt();
 
-        factorial=1;
+        if (num>0){
+            for (int i = num; i > 0; i--) {
 
-        for (int i = num; i > 0; i--) {
-            factorial=factorial*i;
+                cadenaFactorial+=i;
+                if (i>1){
+                    cadenaFactorial+="x";
+                }
+
+                factorial=factorial*i;
+            }
+            System.out.println(cadenaFactorial + " = " + factorial);
+        }else {
+            System.out.println("Te he pedidio un numero positivo imbecil");
         }
-        System.out.println("\nEl factorial de " + num + " es: " + factorial);
 
         //Cerramos el scanner
         sc.close();
